@@ -1,0 +1,29 @@
+.footer {
+    padding: 216px 415px 234px 415px;
+    margin-top: -467px;
+    background: url(../images/footer_background.png), url(../images/footer_main.png);
+    background-repeat: no-repeat;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-primary;
+    font-size: $font-size-primary;
+    line-height: 17px;
+    color: $color-primary;
+    background-size: cover;
+        @include mediaMax($tablet-max) {
+            padding: 440px 30px 50px 30px;
+            margin-top: -695px;
+        }
+
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 41px;
+    gap: 70px;
+    justify-content: space-between;
+        @include media($desktop) {
+            gap: 250px;
+    }
+
+} 

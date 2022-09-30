@@ -1,0 +1,9 @@
+.map {
+    width: 100%;
+    margin-top: -97px;
+        @include media($desktop) {
+            position: relative;
+            z-index: 1;
+    }
+}
+

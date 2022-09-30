@@ -1,0 +1,88 @@
+.nav__item {
+    @include media ($desktop) {
+        &::before {
+            content: "";
+            color: $color-primary;
+            width: 7px;
+            height: 7px;
+            border: 1px solid $color-primary;
+            display: block;
+            position: absolute;
+            right: 124%;
+            top: 16%;
+            border-radius: 75%;
+        }
+    }
+}
+
+li {
+    position: relative;
+}
+
+.nav__list {
+    display: flex;
+    gap: 93px;
+        @include mediaMax ($tablet-max) {
+            display: none;
+        }
+}
+
+.header__nav {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: $font-weight-primary;
+    font-size: $font-size-primary;
+    line-height: 18px;
+    padding: 17px 102px 18px 164px;
+    white-space: nowrap;
+        @include mediaMax ($tablet-max) {
+            text-align: end;
+            padding: 0;
+        }
+        @include media ($large) {
+            padding: 17px 100px;
+        }
+}
+
+a {
+    text-decoration: none;
+    color: $color-primary;
+}
+
+.activeBtn::before {
+    @include media ($desktop) {
+        content: "";
+        background-color: $color-primary;
+        width: 7px;
+        height: 7px;
+        display: block;
+        position: absolute;
+        right: 124%;
+        top: 16%;
+        border-radius: 75%;
+    }
+}
+
+a {
+    border: 1px solid #FFFFFF;
+    border-radius: 25px;
+    padding: 12px 12px 8px 13px;
+    width: 40px;
+    height: 40px;
+}
+
+.social__medias {
+    display: flex;
+    gap: 20px;
+    padding: 5px 0 0 4px;
+        @include mediaMax ($mob-max) {
+            justify-content: center;
+        }
+}
+
+.logo {
+    height: 54px;
+}
+
+.fa-brands:hover {
+    box-shadow: 8px 8px 2px 1px rgb(0 0 255 / 20%);
+}

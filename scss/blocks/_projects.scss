@@ -1,0 +1,118 @@
+.projects {
+    margin: 130px 0 150px 0;
+}
+
+.article {
+    
+    display: block;
+
+        @include media($desktop) {
+            display: flex;
+            position: relative;
+        }
+
+        &:first-child {
+            margin-bottom: 90px;
+
+                @include media($desktop) {
+                    margin-bottom: 150px;
+                    margin-top: 90px;
+            }
+        }
+}
+
+.article__image {
+    @include media($tablet) {
+        position: absolute;
+        left: 0;
+        transition: 2s;
+    }
+        @include media($desktop) {
+            position: absolute;
+            left: 215px;
+            top: 57px;
+    }
+}
+
+.article__block {
+    transform: scaleX(-1);
+}
+
+.article
+    .international-info {
+        margin: 30px 50px 50px 50px;
+            @include media-within ($mob-max, $tablet-max) {
+                text-align: end;
+            
+                & .article__location {
+                    width: 216px;
+                    margin-left: 75%;    
+                        &::before {
+                            left: 2%;
+                        }
+                }
+            }
+        @include media($desktop) {
+            margin: 150px 319px 20px 215px;
+        }
+
+}
+
+.article__description {
+    margin: 50px 50px 0 50px;
+    font-family: $font-family-secondary;
+    font-size: $font-size-secondary;
+    font-weight: $font-weight-primary;
+    line-height: 30px;
+    color: $color-secondary;
+
+        @include media($desktop) {
+            margin: 160px 215px 0 328px;
+        }
+
+}
+
+h3 {
+    font-family: $font-family-primary;
+    font-size: $font-size-h;
+    font-weight: $font-weight-secondary;
+    margin-bottom: 19px;
+    line-height: 54px;
+}
+
+.btn {
+    padding: 16px 41px;
+    background: $color-primary;
+    color: black;
+    border: 1px solid $color-secondary;
+    margin: 40px 0 60px 0;
+    display: block;
+}
+
+.article__location {
+    position: relative;
+        &::before {
+        content: "";
+        background: url(/images/SVG/location.svg);
+        width: 9px;
+        height: 14px;
+        display: block;
+        position: absolute;
+        top: 9px;
+        left: -20px;
+    }
+}
+
+h4 {
+    font-family: $font-family-secondary;
+    font-size: 22px;
+    font-weight: $font-weight-secondary;
+    line-height: $line-height-secondary;
+}
+
+.article__image-additional {
+    // display: none;
+        @include mediaMax ($mob-max) {
+            display: none;
+        }
+}

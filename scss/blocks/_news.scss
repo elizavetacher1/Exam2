@@ -1,0 +1,131 @@
+.news {
+    background: url(../images/latest_news_main.png), linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+    background-size: contain;
+
+    & h2 {
+        color: $color-primary;
+        border: $color-primary;
+        
+            &::before {
+                border: 1px solid $color-primary;;
+            }
+    }
+}
+
+.slick-track {
+    display: flex;
+    margin: 0 15px;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.news {
+    .slick-arrow {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.news        
+    .slick-prev {
+        left: -96px;
+        background: url(../images/SVG/slider-prev.svg);
+        background-repeat: no-repeat;
+        border: 1px solid white;
+        padding: 12px;
+        border-radius: 25px;
+        background-position: center;
+        background-size: auto;
+        width: 40px;
+        height: 40px;
+        top: 290px;
+}
+
+.news 
+    .slick-next {
+        bottom: 290px;
+        background: url(../images/SVG/slider-next.svg);
+        background-repeat: no-repeat;
+        border: 1px solid white;
+        padding: 12px;
+        border-radius: 25px;
+        background-position: center;
+        background-size: auto;
+        width: 40px;
+        height: 40px;
+        left: 104%;
+}
+    
+ .news
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 43%;
+        gap: 16px;
+}
+
+.news
+    button {
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        font-size: 0;
+        border-radius: 50%;
+        color: white;
+        height: 13px;
+        width: 10px;
+        margin: 5px;
+}
+
+.slick-active
+        button             {
+        background-color: transparent;
+}
+
+.news__block-image {
+    width: 60px !important;
+    height: 60px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+small {
+    color: #55B7FF;
+}
+
+.news__block-subtitle {
+    margin: 30px 20px 46px 20px;
+    font-family: $font-family-secondary;
+        @include mediaMax($desktop) {
+            margin: 30px;
+        }
+}
+
+.subtitle-description {
+    display: flex;
+    margin: 40px 86px 30px 0;
+}
+
+.news__block {
+    position: relative;
+}
+
+.news__block-article {
+    background-color: $color-primary;
+    font-weight: $font-weight-primary;
+    font-size: $font-size-secondary;
+    line-height: 25px;
+    margin: 0 15px;
+    letter-spacing: -0.9px;
+}
+
+.news img {
+    width: 100%;
+}
+
+
+.slick-track {
+    margin: 0;
+}
