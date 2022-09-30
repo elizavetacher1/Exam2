@@ -66,6 +66,8 @@ body {
 
 .container {
   padding: 50px 15px;
+  max-width: 1600px;
+  width: 100%;
 }
 @media screen and (min-width: 1600px) {
   .container {
@@ -80,7 +82,7 @@ body {
 section {
   width: 100%;
   margin: 0 auto;
-  max-width: 1600px;
+  position: relative;
 }
 
 .header {
@@ -329,6 +331,10 @@ h2::before {
   transition: all 1s ease-out;
 }
 
+.header__banner .slick-list {
+  width: 100vw;
+}
+
 .footer {
   padding: 216px 415px 234px 415px;
   margin-top: -467px;
@@ -459,9 +465,15 @@ a {
 .projects {
   margin: 130px 0 150px 0;
 }
+@media screen and (min-width: 2000px) {
+  .projects {
+    padding: 0 328px;
+  }
+}
 
 .article {
   display: block;
+  justify-content: space-between;
 }
 @media screen and (min-width: 1600px) {
   .article {
@@ -479,11 +491,14 @@ a {
   }
 }
 
+.article__image {
+  width: 360px;
+}
 @media screen and (min-width: 768px) {
   .article__image {
     position: absolute;
     left: 0;
-    transition: 2s;
+    width: 630px;
   }
 }
 @media screen and (min-width: 1600px) {
@@ -491,6 +506,7 @@ a {
     position: absolute;
     left: 215px;
     top: 57px;
+    transition: 2s;
   }
 }
 
@@ -571,6 +587,11 @@ h4 {
   line-height: 27px;
 }
 
+@media screen and (max-width: 1599px) {
+  .article__image-additional {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 767px) {
   .article__image-additional {
     display: none;
@@ -645,6 +666,11 @@ h4 {
     width: 100%;
   }
 }
+@media screen and (min-width: 2000px) {
+  .gallery__block-image:first-child {
+    height: 566px;
+  }
+}
 
 .gallery .btn {
   margin: 60px auto 0;
@@ -653,10 +679,16 @@ h4 {
 .gallery {
   background-color: white;
   z-index: 2;
+  position: relative;
 }
 @media screen and (max-width: 1599px) {
   .gallery {
     padding-bottom: 10px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .gallery {
+    padding: 0;
   }
 }
 
@@ -665,7 +697,7 @@ h4 {
 }
 @media screen and (min-width: 1600px) {
   .btn__zoom {
-    background: url(../images/Zoom.png);
+    background: url(../images/zoom.png);
     background-size: contain;
     width: 70px;
     height: 70px;
@@ -738,8 +770,8 @@ h4 {
 .news .slick-dots {
   display: flex;
   justify-content: center;
-  position: absolute;
-  left: 43%;
+  margin: 0 auto;
+  width: 100%;
   gap: 16px;
 }
 
@@ -773,15 +805,15 @@ small {
   margin: 30px 20px 46px 20px;
   font-family: "Open Sans", sans-serif;
 }
-@media screen and (max-width: 1600px) {
-  .news__block-subtitle {
-    margin: 30px;
-  }
-}
 
 .subtitle-description {
   display: flex;
   margin: 40px 86px 30px 0;
+}
+@media screen and (max-width: 768px) {
+  .subtitle-description {
+    margin: 40px 0;
+  }
 }
 
 .news__block {
@@ -844,7 +876,7 @@ small {
   margin-top: 42px;
   gap: 54px;
   justify-content: space-evenly;
-  display: flex;
+  display: block;
 }
 @media screen and (min-width: 1600px) {
   .contact__form {
@@ -897,13 +929,17 @@ input:focus {
   color: black;
 }
 
-.map {
-  width: 100%;
+.container.map {
   margin-top: -97px;
+  padding: 0;
 }
 @media screen and (min-width: 1600px) {
-  .map {
+  .container.map {
     position: relative;
     z-index: 1;
   }
+}
+
+iframe {
+  width: 100%;
 }

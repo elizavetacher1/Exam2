@@ -73,6 +73,12 @@
                 width: 100%;
             }
         }
+
+    &:first-child {
+        @include media(2000px) {
+        height: 566px;
+        }
+    }
 }
 
 .gallery .btn {
@@ -82,15 +88,19 @@
 .gallery {
     background-color: white;
     z-index: 2;
+    position: relative;
         @include mediaMax ($tablet-max) {
             padding-bottom: 10px;
+        }
+        @include media (2000px) {
+            padding: 0;
         }
 }
 
 .btn__zoom {
     display: none;
         @include media($desktop) {  
-            background: url(../images/Zoom.png);
+            background: url(../images/zoom.png);
             background-size: contain;
             width: 70px;
             height: 70px;

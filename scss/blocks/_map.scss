@@ -1,9 +1,13 @@
-.map {
-    width: 100%;
+.container.map {
     margin-top: -97px;
+    padding: 0;
         @include media($desktop) {
             position: relative;
             z-index: 1;
     }
+}
+
+iframe {
+    width: 100%;
 }
 

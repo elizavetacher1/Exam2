@@ -36,7 +36,7 @@
     margin-top: 42px;
     gap: 54px;
     justify-content: space-evenly;
-    display: flex;
+    display: block;
         @include media($desktop) {
             display: flex;
         }

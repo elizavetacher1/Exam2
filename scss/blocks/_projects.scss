@@ -1,10 +1,14 @@
 .projects {
     margin: 130px 0 150px 0;
+        @include media (2000px) {
+            padding: 0 328px;
+        }
 }
 
 .article {
     
     display: block;
+    justify-content: space-between;
 
         @include media($desktop) {
             display: flex;
@@ -22,16 +26,18 @@
 }
 
 .article__image {
+    width: 360px;
     @include media($tablet) {
         position: absolute;
         left: 0;
+        width: 630px;
+    }
+    @include media($desktop) {
+        position: absolute;
+        left: 215px;
+        top: 57px;
         transition: 2s;
-    }
-        @include media($desktop) {
-            position: absolute;
-            left: 215px;
-            top: 57px;
-    }
+}
 }
 
 .article__block {
@@ -111,8 +117,10 @@ h4 {
 }
 
 .article__image-additional {
-    // display: none;
-        @include mediaMax ($mob-max) {
-            display: none;
-        }
+    @include mediaMax ($tablet-max) {
+        opacity: 1;
+    }    
+    @include mediaMax ($mob-max) {
+        display: none;
+    }
 }
