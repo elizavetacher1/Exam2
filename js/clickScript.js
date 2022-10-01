@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('.news__block').slick({
         dots: true,
         slidesToShow: 3,
-        // autoplay: 4000,
+        autoplay: 4000,
         slidesToScroll: 1,
         behavior: 'smooth',
         responsive: [
@@ -23,7 +23,7 @@ $(document).ready(function() {
     $('.header__banner').slick({
         dots: true,
         slidesToShow: 1,
-        // autoplay: 4000,
+        autoplay: 4000,
         slidesToScroll: 1,
         behavior: 'smooth'
     })
